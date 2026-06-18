@@ -1,0 +1,610 @@
+/* ===== Franchise landing ===== */
+
+/* Hero — matches Figma 02-Hero (navy headline, rounded photo card, soft blobs) */
+.fr-hero {
+    padding: 72px 0 96px;
+}
+.fr-hero::after {
+    display: none;
+}
+.fr-hero h1 {
+    font-size: 56px;
+    line-height: 1.06;
+    color: var(--navy);
+    margin-bottom: 24px;
+    max-width: 580px;
+}
+.fr-hero .lead {
+    max-width: 540px;
+}
+
+.fr-blob-pink {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    left: -180px;
+    bottom: -200px;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    background: var(--tint-pink);
+    opacity: 0.8;
+    filter: blur(2px);
+}
+.fr-blob-cream {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    right: -220px;
+    top: -180px;
+    width: 760px;
+    height: 760px;
+    border-radius: 50%;
+    background: var(--tint-yellow);
+    opacity: 0.7;
+    filter: blur(2px);
+}
+
+.fr-hero-card {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    margin-left: auto;
+    aspect-ratio: 520 / 600;
+    border-radius: 32px;
+    overflow: visible;
+}
+.fr-hero-card > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 32px;
+    box-shadow: var(--shadow-xl);
+}
+.fr-hero-card .hero-badge.br {
+    bottom: 26px;
+    right: -18px;
+}
+
+@media (max-width: 900px) {
+    .fr-hero h1 {
+        font-size: 36px;
+    }
+    .fr-hero-card {
+        margin: 0 auto;
+    }
+}
+
+/* Navy eyebrow (used in Opportunity + dark/cream sections) */
+.eyebrow-navy {
+    color: var(--navy);
+}
+.eyebrow-cream {
+    color: var(--cream);
+}
+
+/* Your Investment — navy section, cream cards with inline icon + title row */
+.inv-section {
+    background: var(--navy);
+}
+.inv-head {
+    max-width: 900px;
+}
+.inv-title {
+    font-size: 56px;
+    line-height: 1.12;
+    color: var(--cream);
+}
+.inv-sub {
+    max-width: 1200px;
+    margin: 28px 0 40px;
+    font-size: 18px;
+    color: #d9dbe5;
+}
+
+.invest-grid {
+    gap: 24px;
+}
+.inv-card {
+    background: var(--cream);
+    border-radius: 24px;
+    padding: 28px;
+}
+.inv-card-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+.inv-card-head .inv-ic {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 auto;
+}
+.inv-card-head h3 {
+    font-size: 20px;
+    color: var(--navy);
+    margin: 0;
+}
+.inv-card p {
+    font-size: 14px;
+    color: var(--slate-deep);
+}
+
+.inv-cta {
+    margin-top: 40px;
+}
+.inv-cta .btn-ic {
+    width: 20px;
+    height: 20px;
+}
+
+/* The Opportunity — narrow, tall image card (Figma 510x598) */
+.opp-grid {
+    grid-template-columns: 1.05fr 0.82fr;
+}
+.opp-visual {
+    display: flex;
+    justify-content: flex-end;
+}
+.opp-card {
+    position: relative;
+    width: 100%;
+    max-width: 510px;
+    aspect-ratio: 510 / 598;
+}
+.opp-card > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 32px;
+    box-shadow: var(--shadow-xl);
+}
+
+/* Proof row — Figma franchise colors (yellow / teal / orange / pink, cream labels) */
+.fr-proof .stat .k {
+    color: var(--cream);
+}
+.fr-proof .stat:nth-child(1) .v {
+    color: var(--yellow);
+}
+.fr-proof .stat:nth-child(2) .v {
+    color: var(--teal);
+}
+.fr-proof .stat:nth-child(3) .v {
+    color: var(--orange);
+}
+.fr-proof .stat:nth-child(4) .v {
+    color: var(--pink);
+}
+
+/* What You Get — light section, 4 white cards in one row */
+.sup-section {
+    background: var(--cream);
+}
+.sup-head {
+    max-width: 720px;
+    margin-bottom: 56px;
+}
+.sup-head h2 {
+    font-size: 44px;
+    line-height: 1.12;
+    margin-bottom: 20px;
+}
+.sup-sub {
+    font-size: 18px;
+    color: var(--slate-deep);
+    max-width: 1200px;
+}
+.sup-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+.sup-card {
+    background: #fff;
+    border: 1.5px solid #e8e2d4;
+    border-radius: 28px;
+    padding: 32px;
+}
+.sup-card h3 {
+    font-size: 22px;
+    line-height: 1.25;
+    color: var(--navy);
+    margin-bottom: 24px;
+}
+.sup-card p {
+    font-size: 15px;
+    color: var(--slate);
+    line-height: 1.6;
+}
+
+/* Who Should Apply — two contrasting cards */
+.who-head {
+    max-width: 560px;
+    margin-bottom: 40px;
+}
+.who-head h2 {
+    font-size: 44px;
+    line-height: 1.12;
+}
+.who-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+.who-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 32px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+.who-corner {
+    position: absolute;
+    top: -70px;
+    right: -70px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    pointer-events: none;
+}
+.who-card-top {
+    position: relative;
+    z-index: 1;
+}
+.who-tag {
+    display: block;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+.who-card-top h3 {
+    font-size: 21px;
+    line-height: 1.3;
+    margin-bottom: 14px;
+}
+.who-card-top p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+.who-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.who-list li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-size: 13px;
+    line-height: 1.45;
+}
+.who-list li::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    flex: 0 0 auto;
+    margin-top: 1px;
+    background-color: var(--chk, var(--orange));
+    background-image: var(--tick);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 12px 12px;
+}
+
+/* Dark variant (Senior Professionals) */
+.who-card-dark {
+    background: var(--navy);
+}
+.who-card-dark .who-corner {
+    background: var(--yellow);
+    opacity: 0.4;
+}
+.who-card-dark .who-tag {
+    color: var(--yellow);
+}
+.who-card-dark .who-card-top h3,
+.who-card-dark .who-card-top p,
+.who-card-dark .who-list li {
+    color: var(--cream);
+}
+.who-card-dark .who-list {
+    --chk: var(--yellow);
+    --tick: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 6.2 4.8 8.5 9.5 3.5' fill='none' stroke='%231B2D4F' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* Peach variant (Aspiring Entrepreneurs) */
+.who-card-peach {
+    background: #ffd8ca;
+}
+.who-card-peach .who-corner {
+    background: var(--orange);
+    opacity: 0.4;
+}
+.who-card-peach .who-tag {
+    color: var(--navy);
+}
+.who-card-peach .who-card-top h3 {
+    color: var(--orange);
+}
+.who-card-peach .who-card-top p,
+.who-card-peach .who-list li {
+    color: var(--navy);
+}
+.who-card-peach .who-list {
+    --chk: var(--orange);
+    --tick: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 6.2 4.8 8.5 9.5 3.5' fill='none' stroke='%23ffffff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* The Process — head row with button, number+title on one row */
+.proc-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+.proc-head h2 {
+    font-size: 44px;
+    line-height: 1.12;
+}
+.proc-sub {
+    font-size: 18px;
+    color: var(--slate-deep);
+    max-width: 960px;
+    margin: 28px 0 40px;
+}
+.proc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+.step-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: var(--shadow-sm);
+}
+.step-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+.step-top h3 {
+    font-size: 22px;
+    line-height: 1.2;
+    color: var(--navy);
+}
+.step-top .snum {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 52px;
+    line-height: 0.9;
+    color: var(--c, var(--orange));
+    flex: 0 0 auto;
+    opacity: 0.45;
+}
+.step-card p {
+    font-size: 14px;
+    color: var(--slate-deep);
+    line-height: 1.6;
+}
+
+/* Where We Are — head + connected city panel with separators */
+.ctr-head {
+    margin-bottom: 36px;
+}
+.ctr-head h2 {
+    font-size: 44px;
+    line-height: 1.12;
+    margin-bottom: 16px;
+}
+.ctr-sub {
+    font-size: 18px;
+    color: var(--slate-deep);
+    max-width: 1186px;
+}
+.ctr-panel {
+    background: #fff;
+    border-radius: 24px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 48px;
+}
+.ctr-col {
+    padding: 0 28px;
+}
+.ctr-col + .ctr-col {
+    border-left: 1px solid #eee4d6;
+}
+.ctr-col h3 {
+    font-size: 20px;
+    margin-bottom: 18px;
+    color: var(--navy);
+}
+.ctr-col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.ctr-col li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 14px;
+    color: var(--slate-deep);
+    line-height: 1.4;
+}
+.ctr-col li::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin-top: 6px;
+    background: var(--c, var(--orange));
+    flex: 0 0 auto;
+}
+.schools-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--slate-deep);
+    margin-bottom: 24px;
+}
+
+/* FAQ accordion — animated open/close */
+.faq-layout {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 56px;
+    align-items: start;
+}
+.faq-intro .eyebrow {
+    margin-bottom: 48px;
+}
+.faq-intro-text {
+    margin-bottom: 32px;
+}
+.faq-intro-text h2 {
+    font-size: 44px;
+    line-height: 1.14;
+    max-width: 488px;
+}
+.faq-intro-text p {
+    font-size: 16px;
+    color: var(--slate);
+    margin-top: 24px;
+    max-width: 460px;
+}
+.faq-wiggle {
+    display: block;
+    margin-top: 40px;
+    width: 108px;
+    height: 18px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.faq-item {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #efe6d9;
+    overflow: hidden;
+}
+.faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--navy);
+    padding: 24px;
+}
+/* Clean, thicker +/- icon drawn with two bars */
+.faq-q::after {
+    content: "";
+    position: relative;
+    width: 18px;
+    height: 18px;
+    flex: 0 0 auto;
+    background:
+        linear-gradient(var(--orange), var(--orange)) center / 18px 2.4px
+            no-repeat,
+        linear-gradient(var(--orange), var(--orange)) center / 2.4px 18px
+            no-repeat;
+    transition: transform 0.25s ease;
+}
+.faq-item.open .faq-q::after {
+    background: linear-gradient(var(--orange), var(--orange)) center / 18px
+        2.4px no-repeat;
+    transform: rotate(180deg);
+}
+.faq-a {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
+}
+.faq-item.open .faq-a {
+    grid-template-rows: 1fr;
+}
+.faq-a-inner {
+    overflow: hidden;
+}
+.faq-a-inner p {
+    font-size: 14px;
+    color: var(--slate);
+    line-height: 1.6;
+    padding: 0 24px 24px;
+    max-width: 560px;
+}
+
+@media (max-width: 1100px) {
+    .fr-proof .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 1000px) {
+    .sup-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .proc-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 900px) {
+    .who-grid {
+        grid-template-columns: 1fr;
+    }
+    .ctr-panel {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 0;
+    }
+    .ctr-col:nth-child(3) {
+        border-left: none;
+    }
+    .proc-grid {
+        grid-template-columns: 1fr;
+    }
+    .proc-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .opp-grid {
+        grid-template-columns: 1fr;
+    }
+    .opp-visual {
+        justify-content: center;
+    }
+    .faq-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
