@@ -277,8 +277,12 @@ body.nav-open { overflow: hidden; }
 }
 
 @media (max-width: 900px) {
-  .site-header nav { display: none; }
-  .nav-toggle { display: block; }
+  .site-header > .container > nav { display: none; }
+  .nav-toggle { display: block; order: -1; }
+  .site-header .container { gap: 12px; }
+  .site-header .brand { margin-right: auto; }
+  .site-header .brand img { height: 32px; }
+  .header-cta { padding: 9px 18px; font-size: 13px; }
   .section-head h2 { font-size: 32px; }
   .section { padding: 64px 0; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
