@@ -125,6 +125,12 @@ img { display: block; max-width: 100%; }
 .brand { display: flex; align-items: center; gap: 10px; }
 .brand img { height: 38px; width: auto; }
 .nav-toggle { display: none; background: none; border: none; cursor: pointer; }
+.mobile-nav { display: none; }
+.mobile-nav.open {
+  display: flex; flex-direction: column; gap: 8px; padding: 16px 24px 24px;
+  background: var(--cream); border-bottom: 1px solid rgba(27,45,79,.08);
+}
+.mobile-nav a { font-family:'Inter'; font-weight:600; padding: 8px 0; }
 
 /* Footer */
 .site-footer { background: var(--cream); color: var(--navy); padding: 72px 0 32px; border-top: 1px solid rgba(27,45,79,.06); }

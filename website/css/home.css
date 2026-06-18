@@ -1,10 +1,4 @@
 /* ===== Homepage ===== */
-.mobile-nav { display: none; }
-.mobile-nav.open {
-  display: flex; flex-direction: column; gap: 8px; padding: 16px 24px 24px;
-  background: var(--cream); border-bottom: 1px solid rgba(27,45,79,.08);
-}
-.mobile-nav a { font-family:'Inter'; font-weight:600; padding: 8px 0; }
 
 /* Hero */
 .hero { padding: 64px 0 96px; position: relative; overflow: hidden; }
